@@ -32,8 +32,8 @@ fn permute_hypergraph(
     px: Permutation,
 ) -> Hypergraph<Obj, Arr> {
     Hypergraph {
-        s: h.s.map_values(&pw).unwrap(),
-        t: h.t.map_values(&pw).unwrap(),
+        s: h.s.map_indexes(&px).unwrap().map_values(&pw).unwrap(),
+        t: h.t.map_indexes(&px).unwrap().map_values(&pw).unwrap(),
         w: (&pw >> &h.w).unwrap(),
         x: (&px >> &h.x).unwrap(),
     }
@@ -62,6 +62,7 @@ fn main() {
     let examples = [
         ("and", and()),
         ("copy_and", copy_and()),
+        ("half_adder", half_adder()),
         //
     ];
 
