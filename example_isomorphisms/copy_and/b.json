@@ -1,0 +1,44 @@
+{
+  "sources": [
+    2
+  ],
+  "targets": [
+    0
+  ],
+  "hypergraph": {
+    "nodes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "edges": [
+      "Copy",
+      "And"
+    ],
+    "adjacency": [
+      {
+        "sources": [
+          2
+        ],
+        "targets": [
+          3,
+          1
+        ]
+      },
+      {
+        "sources": [
+          3,
+          1
+        ],
+        "targets": [
+          0
+        ]
+      }
+    ],
+    "quotient": [
+      [],
+      []
+    ]
+  }
+}

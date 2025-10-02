@@ -1,0 +1,70 @@
+{
+  "sources": [
+    3,
+    5
+  ],
+  "targets": [
+    0,
+    4
+  ],
+  "hypergraph": {
+    "nodes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "edges": [
+      "Xor",
+      "And",
+      "Copy",
+      "Copy"
+    ],
+    "adjacency": [
+      {
+        "sources": [
+          6,
+          7
+        ],
+        "targets": [
+          4
+        ]
+      },
+      {
+        "sources": [
+          1,
+          2
+        ],
+        "targets": [
+          0
+        ]
+      },
+      {
+        "sources": [
+          3
+        ],
+        "targets": [
+          1,
+          6
+        ]
+      },
+      {
+        "sources": [
+          5
+        ],
+        "targets": [
+          2,
+          7
+        ]
+      }
+    ],
+    "quotient": [
+      [],
+      []
+    ]
+  }
+}
