@@ -1,15 +1,16 @@
 use open_hypergraphs::lax::{OpenHypergraph, var};
+use serde::{Deserialize, Serialize};
 
 ////////////////////////////////////////////////////////////////////////////////
 // Define the theory of polynomial circuits
 
 /// There is a single generating object in the category; thought of as a primitive type (like "Int"
 /// or "Real".
-#[derive(Clone, PartialEq, Eq, Debug)]
+#[derive(Clone, PartialEq, Eq, Debug, Serialize, Deserialize)]
 pub struct Obj;
 
 /// Generating arrows are basic arithmetic operations with copying and discarding.
-#[derive(Clone, PartialEq, Eq, Debug)]
+#[derive(Clone, PartialEq, Eq, Debug, Serialize, Deserialize)]
 pub enum Arr {
     Copy,
     Discard,
