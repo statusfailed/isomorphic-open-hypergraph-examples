@@ -6,8 +6,16 @@ use serde::{Deserialize, Serialize};
 
 /// There is a single generating object in the category; thought of as a primitive type (like "Int"
 /// or "Real".
-#[derive(Clone, PartialEq, Eq, Debug, Serialize, Deserialize)]
-pub struct Obj;
+#[derive(Clone, PartialEq, Eq, Debug, Serialize, Deserialize, Copy)]
+pub struct Obj {
+    bus_width: usize,
+}
+
+impl Obj {
+    pub fn new(n: usize) -> Self {
+        Obj { bus_width: n }
+    }
+}
 
 /// Generating arrows are basic arithmetic operations with copying and discarding.
 #[derive(Clone, PartialEq, Eq, Debug, Serialize, Deserialize)]
@@ -32,17 +40,11 @@ impl Arr {
         }
     }
 
-    pub fn term(&self) -> Term {
-        self.into()
-    }
-}
-
-impl From<&Arr> for OpenHypergraph<Obj, Arr> {
-    fn from(value: &Arr) -> Self {
-        let (m, n) = value.profile();
-        let s = vec![Obj; m];
-        let t = vec![Obj; n];
-        OpenHypergraph::singleton(value.clone(), s, t)
+    pub fn term(&self, obj: Obj) -> Term {
+        let (m, n) = self.profile();
+        let s = vec![obj; m];
+        let t = vec![obj; n];
+        OpenHypergraph::singleton(self.clone(), s, t)
     }
 }
 

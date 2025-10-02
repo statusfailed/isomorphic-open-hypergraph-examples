@@ -8,9 +8,15 @@
   ],
   "hypergraph": {
     "nodes": [
-      null,
-      null,
-      null
+      {
+        "bus_width": 1
+      },
+      {
+        "bus_width": 1
+      },
+      {
+        "bus_width": 1
+      }
     ],
     "edges": [
       "And"

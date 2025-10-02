@@ -9,14 +9,30 @@
   ],
   "hypergraph": {
     "nodes": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      },
+      {
+        "bus_width": 2
+      }
     ],
     "edges": [
       "Copy",
